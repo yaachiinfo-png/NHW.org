@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>New House Of Worship Ministries</title>
+  <meta name="description" content="New House Of Worship Ministries - Official Website">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo-small">
+          <img src="NHW.png" alt="NHW Logo" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <h1>New House Of Worship Ministries</h1>
+          <p>Reaching souls • Building community</p>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+      
+        </ul>
+  <button class="burger" id="burgerBtn" aria-label="Open menu">☰</button>
+  <button class="invert-toggle" id="invertBtn" title="Invert colors" aria-pressed="false">Invert</button>
+      </nav>
+
+    </div>
+    <div class="mobile-nav container" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg" id="heroBg" style="background-image:url('assets/church-hero.jpg')"></div>
+      <div class="container hero-inner">
+        <div class="hero-left fade-in">
+            <div class="glass-card">
+            <h2 class="hero-title">Welcome to
+              <br>New House Of Worship Ministries</h2>
+            <p class="hero-sub">A place where faith grows, lives are transformed, and everyone is welcome. Join our Sunday services and weekly ministries.</p>
+            <div class="hero-ctas">
+                <a href="https://youtube.com/@bishopbztmthembu?si=-iwz9kLOj3kHRYLg" class="cta" target="_blank" rel="noopener noreferrer">WATCH US LIVE</a>
+                <a href="#media" class="btn">Explore Media</a>
+            </div>
+            <div class="stats" aria-hidden="true">
+              <div class="stat"><strong>10:00 AM</strong><span>Sunday Service</span></div>
+              <div class="stat"><strong>17:00 PM</strong><span>Wednesdays</span></div>
+              <div class="stat"><strong>Join</strong><span>Us This Sunday</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right" style="flex:0 0 420px">
+          <div class="card fade-in" style="padding:22px">
+            <h3 style="margin-top:0">Latest Announcement</h3>
+            <p style="margin:6px 0 12px;color:var(--text)">Church building offering we want to build Church now.</p>
+            <div style="display:flex;gap:10px">
+              <a class="btn" href="index.html">Volunteer</a>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="container" id="about">
+      <div style="display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <h3 class="section-title">About Us</h3>
+          <p class="card" style="line-height:1.6">New House Of Worship Ministries is committed to sharing the love of Jesus through worship, teaching, and community outreach. We provide ministries for families, youth, and the elderly — all aimed at helping people grow spiritually and live purposefully.</p>
+        </div>
+        <div style="flex:1;min-width:260px">
+          <h3 class="section-title">Service Times</h3>
+          <div class="card">
+            <p><strong>Anointing Service, Every Sunday:</strong> 10:00am - 14:00pm</p>
+            <p><strong>Midweek:</strong> Wednesday 17:00-19:00(INTERCESION SERVICE)</p>
+            <p><strong>Location:</strong>Postal Address: P.O. Box 3223, Sundumbili 4491
+- Physical Address: Mandeni, Mantungwini Area, Port Natal, Inembe Road, Ward 12
+</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ministries -->
+    <section class="container" id="ministries">
+      <h3 class="section-title">Ministries</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+  <div class="card"><h4>Children</h4><p style="color:var(--text)">Safe, fun, and biblical teaching for kids.</p></div>
+  <div class="card"><h4>Youth</h4><p style="color:var(--text)">Music, mentorship, and life-skills.</p></div>
+  <div class="card"><h4>Outreach</h4><p style="color:var(--text)">Feeding programs and community support.</p></div>
+      </div>
+    </section>
+
+    <!-- Media -->
+    <section class="container" id="media">
+      <h3 class="section-title">Media</h3>
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="tabs" role="tablist">
+              <button class="tab active" data-tab="images">Images</button>
+              <button class="tab" data-tab="videos">Videos</button>
+              <button class="tab" data-tab="sermons">Sermons</button>
+            </div>
+          </div>
+          <div style="color:var(--muted);font-size:13px">Browse our latest media</div>
+        </div>
+
+        <div style="margin-top:16px">
+
+          <!-- Images -->
+          <div class="tab-panel" id="imagesPanel">
+            <div class="gallery-viewer" id="galleryViewer" style="display:flex;flex-direction:column;gap:12px">
+              <!-- Gallery: main image + prev/next + thumbnails. Images come from the site's images/ folder. -->
+              <div style="display:flex;align-items:center;gap:12px">
+                <button id="galleryPrev" class="btn" aria-label="Previous" style="min-width:48px">‹</button>
+                <img id="galleryMain" src="IMG-20250906-WA0008.jpg" alt="gallery main" loading="lazy" style="flex:1;max-height:420px;object-fit:cover;border-radius:8px;cursor:pointer">
+                <button id="galleryNext" class="btn" aria-label="Next" style="min-width:48px">›</button>
+              </div>
+              <div id="galleryThumbs" style="display:flex;gap:8px;overflow-x:auto;padding-top:6px"></div>
+            </div>
+            </div>
+          </div>
+
+          <!-- Videos -->
+          <div class="tab-panel" id="videosPanel" style="display:none">
+            <div id="localVideoGrid" class="video-grid">
+              <!-- Local videos will be populated here by script.js -->
+            </div>
+          </div>
+
+          <!-- Sermons (YouTube embeds) -->
+          <div class="tab-panel" id="sermonsPanel" style="display:none">
+            <div class="video-grid">
+              <div>
+                <div style="aspect-ratio:16/9">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-GX8Qqu_V8Q" title="Sermon -GX8Qqu_V8Q" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="margin-top:8px;font-size:14px;color:var(--muted)">Sermon</div>
+              </div>
+
+              <div>
+                <div style="aspect-ratio:16/9">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/sH01mE94Drs" title="Sermon sH01mE94Drs" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="margin-top:8px;font-size:14px;color:var(--muted)">Sermon</div>
+              </div>
+
+              <div>
+                <div style="aspect-ratio:16/9">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lcnuVEEU_X0" title="Sermon lcnuVEEU_X0" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="margin-top:8px;font-size:14px;color:var(--muted)">Sermon</div>
+              </div>
+
+              <div>
+                <div style="aspect-ratio:16/9">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ueyO5MVLouo" title="Sermon ueyO5MVLouo" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="margin-top:8px;font-size:14px;color:var(--muted)">Sermon</div>
+              </div>
+
+              <div>
+                <div style="aspect-ratio:16/9">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FoAb13XrZqk" title="Sermon FoAb13XrZqk" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="margin-top:8px;font-size:14px;color:var(--muted)">Sermon</div>
+              </div>
+
+              <div>
+                <div style="aspect-ratio:16/9">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OYBqzn3W6V8" title="Sermon OYBqzn3W6V8" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="margin-top:8px;font-size:14px;color:var(--muted)">Sermon</div>
+              </div>
+
+              <div>
+                <div style="aspect-ratio:16/9">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/M4hCvRsKG8Q" title="Sermon M4hCvRsKG8Q" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="margin-top:8px;font-size:14px;color:var(--muted)">Sermon</div>
+              </div>
+
+              <div>
+                <div style="aspect-ratio:16/9">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ID2znyDI-3U" title="Sermon ID2znyDI-3U" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="margin-top:8px;font-size:14px;color:var(--muted)">Sermon</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Join -->
+    <section class="container" id="contact">
+      <h3 class="section-title">Get In Touch</h3>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <form class="card" style="flex:1;min-width:260px;display:flex;flex-direction:column;gap:12px">
+          <input placeholder="Your name" required style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <input placeholder="Email" type="email" required style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <textarea placeholder="Message" rows="5" style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+          <div style="display:flex;gap:8px"><button class="cta" type="submit">Send Message</button><a class="btn" href="#">Call Us</a></div>
+        </form>
+
+        <div style="flex:1;min-width:260px">
+          <div class="card">
+            <h4>Visit Us</h4>
+            <p style="color:var(--muted)">- Physical Address: Mandeni, Mantungwini Area, Port Natal, Inembe Road, Ward 12 | - Postal Address: P.O. Box 3223, Sundumbili 4491
+
+</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.819139963964!2d31.4092644!3d-29.1522224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef74ddcaada12a1%3A0x8c20abbda9a22b39!2sMandeni%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1718030730000!5m2!1sen!2sza"
+              width="100%"
+              height="180"
+              style="border:0;border-radius:8px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mandeni Location Map"
+            ></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>© New House Of Worship Ministries</div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="color:var(--muted);font-size:13px">Follow us</div>
+        <div class="social-links">
+          <a href="https://www.tiktok.com/@bishopbztmthembu?_t=ZS-90KEd4TqbP0&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://youtube.com/@bishopbztmthembu?si=-iwz9kLOj3kHRYLg" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/BishopBVMthembu" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
+    <img id="lightboxImg" src="" alt="view">
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+        </div>
