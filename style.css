@@ -1,0 +1,118 @@
+
+    /* Invert colors: opt-in. When <html> has the `inverted` class the site is inverted
+       (black <-> white swap); media elements are re-inverted so photos/logos keep true colors. */
+    html.inverted {
+      filter: invert(1) hue-rotate(180deg);
+      background: #ffffff;
+    }
+    /* Re-invert media when page is inverted */
+    html.inverted img,
+    html.inverted picture,
+    html.inverted video,
+    html.inverted iframe,
+    html.inverted svg,
+    html.inverted .logo-small img,
+    html.inverted .home-button img {
+      filter: invert(1) hue-rotate(180deg);
+    }
+
+    /* Reset + base (light / beige theme) */
+    :root{
+      --accent:#b71c1c; /* deep red */
+      --accent-2:#ff6f61;
+      --bg:#f7f3ea; /* beige-white background */
+      --card:#ffffff; /* card background */
+      --glass: rgba(0, 0, 0, 0.04);
+      --muted: rgba(0,0,0,0.6);
+      --glass-2: rgba(0, 0, 0, 0.04);
+      --text: #111111;
+      --max-width:1200px;
+    }
+    *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#fbf7f1 0%, var(--bg) 100%); color:var(--text); -webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Layout */
+    .container{width:92%;max-width:var(--max-width);margin:0 auto}
+    header{position:fixed;left:0;right:0;top:18px;z-index:60;backdrop-filter:blur(6px);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.5));border-radius:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo-small{width:56px;height:56px;border-radius:10px;overflow:hidden;box-shadow:0 6px 24px rgba(183,28,28,0.18)}
+    .brand h1{font-size:16px;margin:0;letter-spacing:1px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    nav ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+    nav a.btn{padding:10px 14px;border-radius:10px;font-weight:600}
+    nav a:hover{transform:translateY(-2px)}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 14px;border-radius:12px;box-shadow:0 10px 30px rgba(183,28,28,0.18)}
+
+    /* Mobile menu */
+    .burger{display:none;background:transparent;border:0;color:inherit;font-size:20px}
+    .mobile-nav{display:none}
+
+    /* Hero */
+  .hero{min-height:86vh;display:flex;align-items:center;color:var(--text);position:relative;overflow:hidden}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,0.6) 10%, rgba(255,255,255,0.3) 60%);pointer-events:none}
+    .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:contrast(0.95) saturate(1.05);transform:scale(1.03)}
+    .hero-inner{position:relative;z-index:5;padding:40px 0;display:flex;gap:40px;align-items:center}
+    .hero-left{flex:1}
+    .hero-title{font-size:44px;line-height:1.02;margin:0 0 16px;text-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    .hero-sub{color:var(--muted);margin:0 0 22px;font-size:18px}
+    .hero-ctas{display:flex;gap:14px}
+  .glass-card{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));border:1px solid rgba(0,0,0,0.06);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+
+    /* Quick stats */
+    .stats{display:flex;gap:16px;margin-top:20px}
+  .stat{padding:10px 14px;border-radius:10px;background:var(--glass);min-width:110px}
+    .stat strong{display:block;font-size:18px}
+    .stat span{font-size:13px;color:var(--muted)}
+
+    /* Sections */
+    section{padding:72px 0}
+    .section-title{font-size:20px;margin:0 0 18px}
+  .card{background:var(--card);border-radius:12px;padding:18px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 6px 20px rgba(0,0,0,0.04)}
+
+    /* Media page specifics */
+    .tabs{display:flex;gap:8px}
+  .tab{padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(0,0,0,0.06);cursor:pointer;color:var(--text)}
+  .tab.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border:0}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .sermon-list{display:grid;gap:12px}
+    .sermon-item{display:flex;align-items:center;gap:14px;padding:12px;border-radius:10px}
+
+    /* Lightbox */
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;z-index:120}
+    .lightbox img{max-width:90%;max-height:90%;border-radius:8px}
+
+    /* Glowing logo home button */
+    .home-button{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;z-index:100;width:84px;height:84px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.1));box-shadow:0 10px 40px rgba(183,28,28,0.25);border:2px solid rgba(255,255,255,0.06)}
+    .home-button .glow{position:absolute;inset:-8px;border-radius:999px;filter:blur(14px);opacity:0.9;background:radial-gradient(circle at 50% 30%, rgba(183,28,28,0.28), rgba(255,111,97,0.06))}
+    .home-button img{width:56px;height:56px;border-radius:10px;position:relative;z-index:4}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-title{font-size:32px}
+      .gallery-grid, .video-grid{grid-template-columns:repeat(2,1fr)}
+      nav ul{display:none}
+      .burger{display:inline-block}
+      .mobile-nav{display:none;position:fixed;inset:auto 16px 16px 16px;background:linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.55));padding:18px;border-radius:12px;backdrop-filter:blur(8px);}
+      .mobile-nav.open{display:block}
+    }
+    @media (max-width:560px){
+      .hero{min-height:72vh}
+      .gallery-grid,.video-grid{grid-template-columns:1fr}
+      .brand h1{font-size:14px}
+      .home-button{width:72px;height:72px}
+      .home-button img{width:48px;height:48px}
+    }
+
+    /* subtle animations */
+    .fade-in{animation:fadeInUp .9s cubic-bezier(.2,.9,.2,1) both}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
